@@ -117,7 +117,6 @@ def extract_budget(text: str):
             return val * 1_000
         return val
 
-    # التعديل الصارم لدعم الأرقام زي 600k 
     m = re.search(r'(?:تحت|اقل من|حتى|في حدود|سقف|under|below)\s*(\d+(?:\.\d+)?)\s*(m|مليون|k|الف|K)?', text)
     if m:
         val = float(m.group(1))
